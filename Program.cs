@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("\n === Academic & Personal Readiness Evaluation ===");
+            int currentyear = DateTime.Now.Year;
+            Console.Write("Current Year:");
+            Console.ReadLine();
+            Console.Write("Enter your birth year:");
+            Console.ReadLine();
         }
     }
 }
