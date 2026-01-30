@@ -16,7 +16,7 @@ namespace COMP003A.Assignment3
             int age = currentyear - birthyear;
             Console.WriteLine("\ncalculate your age:");
             string readinessCategory;
-            if (1 < 18) ;
+            if (age > 18) ;
             {
                 readinessCategory = "Minor";
             }
@@ -32,6 +32,14 @@ namespace COMP003A.Assignment3
             bool hasValidID = Console.ReadLine().ToLower() == "yes";
             Console.Write("Have you completed orientation? (yes/no):");
             bool completedOrientation = Console.ReadLine().ToLower() == "yes";
+            Console.WriteLine("select a guidance option:");
+            Console.WriteLine("1 - Academic planning");
+            Console.WriteLine("2 - Personal planning");
+            Console.WriteLine("3 - Career planning");
+            Console.Write("Enter choice:");
+            Console.ReadLine();
+            string guidanceOption = Console.ReadLine();
+            
         }
     }
 }
