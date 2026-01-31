@@ -30,10 +30,13 @@ namespace COMP003A.Assignment3
             }
             Console.Write($" Readiness Category:{readinessCategory}");
             Console.ReadLine();
+            Console.ReadLine();
             Console.Write("Do you have a valid ID? (yes/no): ");
             bool hasValidID = Console.ReadLine().ToLower() == "yes";
             Console.Write("Have you completed orientation? (yes/no):");
             bool completedOrientation = Console.ReadLine().ToLower() == "yes";
+            Console.ReadLine();
+
             String readinessStatus;
             if (hasValidID && completedOrientation)
             {
@@ -47,6 +50,9 @@ namespace COMP003A.Assignment3
             {
                 readinessStatus = "not ready";
             }
+            Console.Write($"Readiness Status:{readinessStatus}");
+            Console.ReadLine();
+            Console.ReadLine();
                 Console.WriteLine("select a guidance option:");
             Console.WriteLine("1 - Academic planning");
             Console.WriteLine("2 - Personal planning");
