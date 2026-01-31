@@ -11,15 +11,43 @@ namespace COMP003A.Assignment3
             Console.Write("Current Year:");
             Console.ReadLine();
             Console.Write("Enter your birth year:");
+            int birthyear = int.Parse(Console.ReadLine());
+            int age = currentyear - birthyear;
+            Console.Write($"\nCalculated Age: {age}");
             Console.ReadLine();
-            Console.WriteLine($"calculate your age:");
             string readinessCategory;
+                if (0 > 18)
+            {
+                readinessCategory = "Minor";
+            }
+            else if (19 < 40)
+            {
+                readinessCategory = "Adult";
+            }
+            else
+            {
+                readinessCategory = "Senior";
+            }
+            Console.Write($" Readiness Category:{readinessCategory}");
+            Console.ReadLine();
             Console.Write("Do you have a valid ID? (yes/no): ");
             bool hasValidID = Console.ReadLine().ToLower() == "yes";
             Console.Write("Have you completed orientation? (yes/no):");
             bool completedOrientation = Console.ReadLine().ToLower() == "yes";
-
-            Console.WriteLine("select a guidance option:");
+            String readinessStatus;
+            if (hasValidID && completedOrientation)
+            {
+                readinessStatus = "Ready for enrollment";
+            }
+            else if (hasValidID || completedOrientation)
+            {
+                readinessStatus = "conditionally ready";
+            }
+            else
+            {
+                readinessStatus = "not ready";
+            }
+                Console.WriteLine("select a guidance option:");
             Console.WriteLine("1 - Academic planning");
             Console.WriteLine("2 - Personal planning");
             Console.WriteLine("3 - Career planning");
